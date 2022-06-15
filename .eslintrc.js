@@ -4,7 +4,6 @@ module.exports = {
     es2021: true,
   },
   extends: [
-    'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'prettier',
     'plugin:prettier/recommended',
@@ -17,7 +16,5 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['react'],
-  rules: {
-    'react/prop-types': [false],
-  },
+  rules: {},
 }
