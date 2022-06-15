@@ -1,12 +1,16 @@
 import { hot } from 'react-hot-loader/root'
+import { ThemeProvider } from 'styled-components'
 
-import { Theme } from './themes/theme'
+import AppRoutes from './routes/Routes'
+import { GlobalStyle } from './themes/GlobalStyle'
+import { theme } from './themes/theme'
 
 const App = () => {
   return (
-    <Theme>
-      <h1>Teste</h1>
-    </Theme>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <AppRoutes />
+    </ThemeProvider>
   )
 }
 
