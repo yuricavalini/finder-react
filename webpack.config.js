@@ -43,6 +43,12 @@ const config = {
     }),
     new CleanWebpackPlugin(),
   ],
+  stats: {
+    errorDetails: true,
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
 }
 
 module.exports = config
