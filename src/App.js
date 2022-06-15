@@ -1,10 +1,12 @@
 import { hot } from 'react-hot-loader/root'
 
+import { Theme } from './themes/theme'
+
 const App = () => {
   return (
-    <div>
-      <h1>Hello World</h1>
-    </div>
+    <Theme>
+      <h1>Teste</h1>
+    </Theme>
   )
 }
 
