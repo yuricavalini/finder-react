@@ -18,6 +18,7 @@
     "@babel/preset-react": "^7.17.12",
     "@hot-loader/react-dom": "^17.0.2",
     "babel-loader": "^8.2.5",
+    "babel-plugin-styled-components": "^2.0.7",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^11.0.0",
     "eslint": "^8.0.1",
@@ -38,6 +39,10 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-hot-loader": "^4.13.0"
+    "react-hot-loader": "^4.13.0",
+    "styled-components": "^5.3.5"
+  },
+  "resolutions": {
+    "styled-components": "^5"
   }
 }
