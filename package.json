@@ -54,7 +54,8 @@
     "react-hot-loader": "^4.13.0",
     "react-hotjar": "^5.0.0",
     "react-router-dom": "6",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "styled-system": "^5.1.5"
   },
   "resolutions": {
     "styled-components": "^5"
