@@ -50,6 +50,7 @@
     "axios": "^0.27.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-gtm-module": "^2.0.11",
     "react-hot-loader": "^4.13.0",
     "react-hotjar": "^5.0.0",
     "react-router-dom": "6",
