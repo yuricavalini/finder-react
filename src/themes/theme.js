@@ -28,6 +28,10 @@ export const theme = {
   fonts: {
     primary: '"Noto Sans", Arial, sans-serif',
   },
+  fontWeights: {
+    regular: 400,
+    bold: 700,
+  },
   borderRadius: {
     sm: '0.6rem',
     base: '0.8rem',

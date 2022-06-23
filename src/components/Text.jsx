@@ -1,7 +1,14 @@
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import propTypes from '@styled-system/prop-types'
-import { flexbox, space, layout, typography, color, variant } from 'styled-system'
+import {
+  flexbox,
+  space,
+  layout,
+  typography,
+  color,
+  variant,
+} from 'styled-system'
 
 const XS = 'xs'
 const SM = 'sm'
@@ -14,12 +21,14 @@ const H2 = 'h2'
 const H1 = 'h1'
 const DISPLAY = 'display'
 
-export const Text = ({children, ...props}) => <StyledText {...props}>{children}</StyledText>
+export const Text = ({ children, ...props }) => (
+  <StyledText {...props}>{children}</StyledText>
+)
 
 const StyledText = styled.p(
   ({ theme }) => ({
     fontFamily: theme.fonts.primary,
-    color: theme.colors.textPrimary
+    color: theme.colors.textPrimary,
   }),
   ({ theme }) =>
     variant({
@@ -53,8 +62,8 @@ const StyledText = styled.p(
         },
         [DISPLAY]: {
           fontSize: theme.fontSizes[DISPLAY],
-        }
-      }
+        },
+      },
     }),
   flexbox,
   space,
@@ -64,7 +73,7 @@ const StyledText = styled.p(
 )
 
 Text.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   variant: PropTypes.oneOf([XS, SM, BASE, LG, H5, H4, H3, H2, H1, DISPLAY]),
   ...propTypes.flexbox,
   ...propTypes.space,

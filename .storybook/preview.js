@@ -1,3 +1,4 @@
+import { withRouter } from 'storybook-addon-react-router-v6';
 import { ThemeProvider } from 'styled-components';
 
 import { theme } from '../src/themes/theme'
@@ -8,6 +9,7 @@ export const decorators = [
       <Story />
     </ThemeProvider>
   ),
+  withRouter
 ];
 
 export const parameters = {
