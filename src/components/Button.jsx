@@ -18,18 +18,6 @@ export const Button = ({ disabled, children, onClick, ...props }) => {
   )
 }
 
-Button.PropTypes = {
-  disabled: PropTypes.bool,
-  children: PropTypes.element,
-  onClick: PropTypes.func,
-  ...propTypes.space,
-  ...propTypes.layout,
-  ...propTypes.color,
-  ...propTypes.typography,
-  ...propTypes.border,
-  ...propTypes.flexbox,
-}
-
 const StyledButton = styled.button`
   cursor: pointer;
   padding: 10px 24px;
@@ -55,3 +43,15 @@ const StyledButton = styled.button`
   ${border}
   ${flexbox}
 `
+
+Button.PropTypes = {
+  disabled: PropTypes.bool,
+  children: PropTypes.element,
+  onClick: PropTypes.func,
+  ...propTypes.space,
+  ...propTypes.layout,
+  ...propTypes.color,
+  ...propTypes.typography,
+  ...propTypes.border,
+  ...propTypes.flexbox,
+}
