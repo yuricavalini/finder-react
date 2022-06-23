@@ -44,7 +44,7 @@ const StyledButton = styled.button`
   ${flexbox}
 `
 
-Button.PropTypes = {
+Button.propTypes = {
   disabled: PropTypes.bool,
   children: PropTypes.element,
   onClick: PropTypes.func,

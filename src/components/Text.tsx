@@ -64,7 +64,7 @@ const StyledText = styled.p(
 )
 
 Text.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   variant: PropTypes.oneOf([XS, SM, BASE, LG, H5, H4, H3, H2, H1, DISPLAY]),
   ...propTypes.flexbox,
   ...propTypes.space,
