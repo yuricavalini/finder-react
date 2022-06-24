@@ -16,7 +16,7 @@ export const Checkbox = ({
   ...props
 }) => {
   return (
-    <StyledLabel disabled={disabled} for={id} {...props}>
+    <StyledLabel disabled={disabled} htmlFor={id} {...props}>
       <input
         type="checkbox"
         name={name}
@@ -25,7 +25,7 @@ export const Checkbox = ({
         onChange={onChange}
         disabled={disabled}
       />
-      <i class="checkbox-icon"></i>
+      <i className="checkbox-icon"></i>
       <span>{label}</span>
     </StyledLabel>
   )
