@@ -46,7 +46,7 @@ const StyledButton = styled.button`
 
 Button.propTypes = {
   disabled: PropTypes.bool,
-  children: PropTypes.element,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   onClick: PropTypes.func,
   ...propTypes.space,
   ...propTypes.layout,
