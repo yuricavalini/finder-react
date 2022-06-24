@@ -62,6 +62,9 @@ export const theme = {
     blue: {
       n900: '#282435',
     },
+    magenta: {
+      n800: '#413d4c',
+    },
     gray: {
       n900: '#1f1b2d',
       n950: '#1f1b2d50',
