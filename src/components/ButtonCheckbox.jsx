@@ -13,7 +13,7 @@ export const ButtonCheckbox = ({
 }) => {
   return (
     <Container {...props}>
-      <label for={id}>
+      <label htmlFor={id}>
         <input
           type="checkbox"
           name={name}
