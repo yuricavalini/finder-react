@@ -4,7 +4,7 @@ import propTypes from '@styled-system/prop-types'
 import { border, flexbox, layout, space } from 'styled-system'
 
 export const ButtonCheckbox = ({
-  checked,
+  checked = false,
   onChange,
   label,
   name,

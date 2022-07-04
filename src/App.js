@@ -7,6 +7,8 @@ import AppRoutes from './routes/Routes'
 import { GlobalStyle } from './themes/GlobalStyle'
 import { theme } from './themes/theme'
 
+import { SearchDataProvider } from './context/SearchDataContext'
+
 // hotjar.initialize(process.env.HOTJAR_HJID, process.env.HOTJAR_HJSV)
 // hotjar.identify(process.env.HOTJAR_USER_ID, { userProperty: 'value' })
 // hotjar.event('button-click')
@@ -21,8 +23,10 @@ import { theme } from './themes/theme'
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <AppRoutes />
+      <SearchDataProvider>
+        <GlobalStyle />
+        <AppRoutes />
+      </SearchDataProvider>
     </ThemeProvider>
   )
 }
