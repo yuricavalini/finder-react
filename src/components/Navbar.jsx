@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import propTypes from '@styled-system/prop-types'
 import { useEffect, useRef, useState } from 'react'
 import { css } from 'styled-components'
-
 import {
   border,
   color,
@@ -11,6 +10,7 @@ import {
   space,
   typography,
 } from 'styled-system'
+
 import Logo from '../assets/icons/logo.svg'
 import UserIcon from '../assets/icons/user-single.svg'
 import PlusIcon from '../assets/icons/plus.svg'
