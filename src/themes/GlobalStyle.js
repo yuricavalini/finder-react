@@ -69,4 +69,73 @@ export const GlobalStyle = createGlobalStyle`
   input[type='number'] {
     -moz-appearance: textfield;
   }
+
+/* ACCESSIBILITY */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/********** HELPER CLASSES **********/
+.center-page-content {
+  padding: 0 24px;
+  margin: 0 auto;
+  max-width: var(--main-width);
+  width: 100%;
+}
+
+.center-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.direction-column {
+  flex-direction: column;
+}
+
+.flex-gap {
+  display: flex;
+  gap: 24px;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.margin-top-96 {
+  margin-top: 96px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  min-width: auto;
+}
+
+.row {
+  display: flex;
+  min-width: auto;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.text-truncate {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 `
