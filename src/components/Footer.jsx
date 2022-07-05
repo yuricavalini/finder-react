@@ -386,8 +386,8 @@ const StyledFooter = styled.footer(
       height: 18px;
       max-width: 18px;
       min-width: 18px;
-      mask-image: url($MailIcon);
-      -webkit-mask-image: url($MailIcon);
+      mask-image: url(${MailIcon});
+      -webkit-mask-image: url(${MailIcon});
       background-color: ${theme.colors.white.n500};
       -webkit-mask-repeat: no-repeat;
       mask-repeat: no-repeat;
@@ -587,8 +587,8 @@ const StyledFooter = styled.footer(
       .footer-contacts-channels
       .footer-contacts-email
       .mail--icon {
-      mask-image: url($MailIcon);
-      -webkit-mask-image: url($MailIcon);
+      mask-image: url(${MailIcon});
+      -webkit-mask-image: url(${MailIcon});
     }
 
     .footer-section

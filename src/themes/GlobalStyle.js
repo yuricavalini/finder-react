@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
   html {
     height: 100%;
     font-size: 62.5%; /* 10px */
-    color: ${theme.colors.white};
+    color: ${theme.colors.white.n000};
     scroll-behavior: smooth;
   }
 
@@ -26,6 +26,11 @@ export const GlobalStyle = createGlobalStyle`
     background-color: ${theme.colors.gray.n900};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  #app {
+    max-width: ${theme.widths.main};
+    margin: 0 auto;
   }
 
   input,
@@ -82,11 +87,36 @@ export const GlobalStyle = createGlobalStyle`
   border: 0;
 }
 
+/* SCROLLBAR STYLE */
+
+/* https://www.digitalocean.com/community/tutorials/css-scrollbars-pt */
+/* https://stackoverflow.com/questions/50817727/change-scrollbar-height */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: ${theme.colors.white.n000} ${theme.colors.white.n500};
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  transition: all 0.2s ease-in;
+}
+
+*::-webkit-scrollbar-track {
+  background: ${theme.colors.white.n500};
+  border-radius: 20px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: ${theme.colors.white.n000};
+  border-radius: 20px;
+  border: 3px solid ${theme.colors.white.n000};
+}
+
 /********** HELPER CLASSES **********/
 .center-page-content {
   padding: 0 24px;
   margin: 0 auto;
-  max-width: var(--main-width);
+  max-width: ${theme.widths.main};
   width: 100%;
 }
 
