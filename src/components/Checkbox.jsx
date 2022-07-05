@@ -81,8 +81,8 @@ const StyledLabel = styled.label`
   }
 
   & span {
-    font-size: 16px;
-    color: ${({ theme }) => theme.colors.gray.n700};
+    font-size: ${({ theme }) => theme.fontSizes.sm};
+    color: ${({ theme }) => theme.colors.text.white};
     line-height: ${({ theme }) => theme.lineHeights.sm};
     font-weight: ${({ theme }) => theme.fontWeights.regular};
     margin-left: 4px;
