@@ -28,11 +28,6 @@ export const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
   }
 
-  #app {
-    max-width: ${theme.widths.main};
-    margin: 0 auto;
-  }
-
   input,
   button,
   select {
