@@ -380,7 +380,7 @@ const WrapperContainer = styled.div(
   `
 )
 
-const Card = styled.article(
+export const Card = styled.article(
   ({ theme }) => css`
     position: relative;
     background-color: ${theme.colors.white.n040};
@@ -710,17 +710,17 @@ const Card = styled.article(
     }
 
     @media only screen and (max-width: 860px) {
-      .secondary {
+      &.secondary {
         max-height: none;
       }
 
-      .secondary .wrapper {
+      &.secondary .wrapper {
         max-width: none;
         min-height: 150px;
         width: 100%;
       }
 
-      .secondary .container {
+      &.secondary .container {
         width: 100%;
       }
     }

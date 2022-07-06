@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useContext } from 'react'
 
+import { Link } from '../../components/Link'
 import { Navbar } from '../../components/Navbar'
 import { Footer } from '../../components/Footer'
 import { CardsCarousel } from '../../components/CardsCarousel'
@@ -23,6 +24,8 @@ import GalleryThree from '../../assets/images/gallery-3.jpg'
 import GalleryFour from '../../assets/images/gallery-4.jpg'
 import Avatar from '../../assets/images/avatar.png'
 
+const CatalogPath = '/catalog'
+
 export const Car = () => {
   const [subscribe, setSubscribe] = useState(true)
 
@@ -44,7 +47,6 @@ export const Car = () => {
 
   const getPreviewImagesList = () => {
     const previewList = document.getElementsByClassName('preview-image')
-    console.warn(previewList)
     if (!previewList) {
       return []
     }
@@ -143,25 +145,25 @@ export const Car = () => {
   return (
     <>
       <Navbar />
-      {/* <!-- MAIN --> */}
       <main className="main-car-page center-page-content">
-        {/* <!-- CAR AD --> */}
         <CardHeader>
           <div className="card-header-wrapper">
             <Breadcrumbs aria-label="breadcrumbs" role="navigation">
               <ol className="breadcrumb">
                 <li className="breadcrumb-item">
-                  <a href="#">Home</a>
+                  <Link to="/" children="Home" />
                 </li>
 
                 <li className="breadcrumb-item">
-                  <a href="#">Usados</a>
+                  <Link to={`${CatalogPath}?condition=2`} children="Usados" />
                 </li>
 
                 <li className="breadcrumb-item active">
-                  <a href="#" aria-current="page">
-                    Mercedes-Benz E 400 Cabriolet
-                  </a>
+                  <Link
+                    to="#"
+                    children="Mercedes-Benz E 400 Cabriolet"
+                    aria-current="page"
+                  />
                 </li>
               </ol>
             </Breadcrumbs>
@@ -306,11 +308,7 @@ export const Car = () => {
                     <p>Vendedor particular</p>
 
                     <div className="basic">
-                      <img
-                        // src="./assets/images/avatar.png"
-                        src={Avatar}
-                        alt="Avatar"
-                      />
+                      <img src={Avatar} alt="Avatar" />
 
                       <div>
                         <h1 className="username">Usuário</h1>
@@ -379,9 +377,7 @@ export const Car = () => {
             </Sidebar>
           </div>
         </ContentWrapper>
-        {/* <!-- / CAR AD --> */}
 
-        {/* <!-- SELLER DESCRIPTION --> */}
         <SellerDescription className="car-ad-description">
           <section className="car-ad-icons center-content">
             <div className="car-ad-description--icon center-content">
@@ -447,9 +443,7 @@ export const Car = () => {
             </div>
           </section>
         </SellerDescription>
-        {/* <!-- / SELLER DESCRIPTION --> */}
 
-        {/* <!-- ULTIMOS --> */}
         <Latest className="ultimos">
           <div className="headline headline-car-page">
             <h1>Você pode estar interessado</h1>
@@ -463,10 +457,8 @@ export const Car = () => {
 
           <CardsCarousel className="wrapper-container" />
         </Latest>
-        {/* <!-- / ULTIMOS --> */}
       </main>
       <Footer />
-      {/* <!-- / MAIN --> */}
     </>
   )
 }
