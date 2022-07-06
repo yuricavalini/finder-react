@@ -40,13 +40,17 @@ export const Footer = ({ ...props }) => {
             <div className="location-options-field center-content">
               <i className="location--icon"></i>
               <select name="local" id="local" defaultValue="">
-                {locales?.map((locale, index) => {
-                  return (
-                    <option key={locale.id} value={locale.id}>
-                      {locale.value}
-                    </option>
-                  )
-                })}
+                {locales.length ? (
+                  locales?.map((locale, index) => {
+                    return (
+                      <option key={locale.id} value={locale.id}>
+                        {locale.value}
+                      </option>
+                    )
+                  })
+                ) : (
+                  <option value="">Local</option>
+                )}
               </select>
             </div>
           </div>
