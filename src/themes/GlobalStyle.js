@@ -1,6 +1,8 @@
 import { createGlobalStyle } from 'styled-components'
 import { theme } from './theme'
 
+import BannerBackgroundImage from '../assets/images/banner-bg.svg'
+
 export const GlobalStyle = createGlobalStyle`
   *,
   *::after,
@@ -68,6 +70,13 @@ export const GlobalStyle = createGlobalStyle`
   /* Firefox */
   input[type='number'] {
     -moz-appearance: textfield;
+  }
+
+  .bg-image {
+    background-image: url(${BannerBackgroundImage});
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 
 /* ACCESSIBILITY */
