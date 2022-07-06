@@ -8,6 +8,7 @@ const config = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -32,7 +33,12 @@ const config = {
       patterns: [{ from: 'src/index.html' }],
     }),
     new CleanWebpackPlugin(),
-    new Dotenv(),
+    new Dotenv({
+      path: path.join(__dirname, './.env'),
+      safe: true,
+      allowEmptyValues: true,
+      systemvars: true,
+    }),
   ],
   stats: {
     errorDetails: true,

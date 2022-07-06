@@ -5,6 +5,11 @@ module.exports = merge(common, {
   mode: 'development',
   devtool: 'inline-source-map',
   devServer: {
+    devMiddleware: {
+      writeToDisk: true,
+    },
     static: './dist',
+    historyApiFallback: true,
+    port: 8080,
   },
 })
