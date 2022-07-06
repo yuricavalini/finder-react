@@ -1,6 +1,8 @@
 import { createGlobalStyle } from 'styled-components'
 import { theme } from './theme'
 
+import BannerBackgroundImage from '../assets/images/banner-bg.svg'
+
 export const GlobalStyle = createGlobalStyle`
   *,
   *::after,
@@ -26,11 +28,6 @@ export const GlobalStyle = createGlobalStyle`
     background-color: ${theme.colors.gray.n900};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
-
-  #app {
-    max-width: ${theme.widths.main};
-    margin: 0 auto;
   }
 
   input,
@@ -73,6 +70,13 @@ export const GlobalStyle = createGlobalStyle`
   /* Firefox */
   input[type='number'] {
     -moz-appearance: textfield;
+  }
+
+  .bg-image {
+    background-image: url(${BannerBackgroundImage});
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 
 /* ACCESSIBILITY */

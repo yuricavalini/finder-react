@@ -1,3 +1,7 @@
+import { useState, useEffect } from 'react'
+
+import { fechDataFromApi } from '../helpers/utils'
+
 import styled, { css } from 'styled-components'
 
 import Logo from '../assets/icons/logo.svg'
@@ -12,6 +16,12 @@ import TelegramIcon from '../assets/icons/telegram.svg'
 import MessengerIcon from '../assets/icons/messenger.svg'
 
 export const Footer = ({ ...props }) => {
+  const [locales, setLocales] = useState([])
+
+  // Initial render
+  useEffect(() => {
+    fechDataFromApi('locale').then(({ data }) => setLocales(data))
+  }, [])
   return (
     <StyledFooter {...props}>
       <div className="footer-header center-content">
@@ -30,7 +40,17 @@ export const Footer = ({ ...props }) => {
             <div className="location-options-field center-content">
               <i className="location--icon"></i>
               <select name="local" id="local" defaultValue="">
-                <option value="">São Paulo</option>
+                {locales.length ? (
+                  locales?.map((locale, index) => {
+                    return (
+                      <option key={locale.id} value={locale.id}>
+                        {locale.value}
+                      </option>
+                    )
+                  })
+                ) : (
+                  <option value="">Local</option>
+                )}
               </select>
             </div>
           </div>
@@ -276,6 +296,22 @@ const StyledFooter = styled.footer(
       font-weight: ${theme.fontWeights.regular};
       line-height: ${theme.lineHeights.base};
       color: ${theme.colors.white.n500};
+    }
+
+    .footer-header
+      .footer-content
+      .location-options
+      .location-options-field
+      select {
+      max-width: 112px;
+    }
+
+    .footer-header
+      .footer-content
+      .location-options
+      .location-options-field
+      option {
+      color: ${theme.colors.gray.n900};
     }
 
     .footer-header

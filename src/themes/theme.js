@@ -56,6 +56,7 @@ export const theme = {
       n040: '#ffffff0a',
       n120: '#ffffff1f',
       n150: '#ffffff26',
+      n400: '#ffffff66',
       n500: '#ffffff80',
       n700: '#ffffffb3',
     },
@@ -80,7 +81,7 @@ export const theme = {
       n100: '#f9f8fa',
     },
     gradient: {
-      circle: '26.21deg #fd5631 0%, #5d3cf2 108.88%',
+      circle: '26.21deg, #fd5631 0%, #5d3cf2 108.88%',
       button: '180deg, rgba(69, 64, 86, 0.765) 0%, rgba(69, 64, 86, 0.9) 100%',
     },
     filter: {

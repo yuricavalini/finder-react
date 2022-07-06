@@ -11,9 +11,13 @@ import {
   typography,
 } from 'styled-system'
 
+import { Link } from './Link'
+
 import Logo from '../assets/icons/logo.svg'
 import UserIcon from '../assets/icons/user-single.svg'
 import PlusIcon from '../assets/icons/plus.svg'
+
+const CatalogPath = '/catalog'
 
 export const Navbar = ({ ...props }) => {
   const [isAriaChecked, setIsAriaChecked] = useState(false)
@@ -77,46 +81,58 @@ export const Navbar = ({ ...props }) => {
       >
         <ul className="navbar-list" id="desktopNavList">
           <li className="navbar-item">
-            <a href="#novos" className="navbar-link">
-              Novos
-            </a>
+            <Link
+              to={`${CatalogPath}?condition=1`}
+              className="navbar-link"
+              children="Novos"
+            />
+          </li>
+
+          <li className="navbar-item">
+            <Link
+              to={`${CatalogPath}?condition=2`}
+              className="navbar-link"
+              children="Usados"
+            />
           </li>
           <li className="navbar-item">
-            <a href="#usados" className="navbar-link">
-              Usados
-            </a>
+            <Link to="#vender" className="navbar-link" children="Vender" />
           </li>
           <li className="navbar-item">
-            <a href="#vender" className="navbar-link">
-              Vender
-            </a>
+            <Link to="#comprar" className="navbar-link" children="Comprar" />
           </li>
           <li className="navbar-item">
-            <a href="#comprar" className="navbar-link">
-              Comprar
-            </a>
-          </li>
-          <li className="navbar-item">
-            <a href="#novidades" className="navbar-link">
-              Novidades e Reviews
-            </a>
+            <Link
+              to="#novidades"
+              className="navbar-link"
+              children="Novidades e Reviews"
+            />
           </li>
         </ul>
 
         <div className="navbar-actions center-content">
-          <a href="#entrar" className="navbar-link">
-            <i className="icon user--icon"></i>
-            <span>Entrar</span>
-          </a>
-          <a
-            href="#vender"
+          <Link
+            className="navbar-link"
+            to="#entrar"
+            children={
+              <>
+                <i className="icon user--icon"></i>
+                <span>Entrar</span>
+              </>
+            }
+          />
+          <Link
             className="navbar-link navbar-btn"
             role="button"
             aria-label="Vender"
-          >
-            <i className="icon plus--icon"></i>
-            <span>Vender</span>
-          </a>
+            to="#entrar"
+            children={
+              <>
+                <i className="icon plus--icon"></i>
+                <span>Vender</span>
+              </>
+            }
+          />
         </div>
       </nav>
 
@@ -129,34 +145,34 @@ export const Navbar = ({ ...props }) => {
         <div className="overlay-content">
           <ul className="navbar-list" id="mobileNavList">
             <li className="navbar-item">
-              <a href="#entrar" className="navbar-link">
-                Entrar
-              </a>
+              <Link to="#entrar" className="navbar-link" children="Entrar" />
             </li>
             <li className="navbar-item">
-              <a href="#novos" className="navbar-link">
-                Novos
-              </a>
+              <Link
+                to={`${CatalogPath}?condition=1`}
+                className="navbar-link"
+                children="Novos"
+              />
             </li>
             <li className="navbar-item">
-              <a href="#usados" className="navbar-link">
-                Usados
-              </a>
+              <Link
+                to={`${CatalogPath}?condition=2`}
+                className="navbar-link"
+                children="Usados"
+              />
             </li>
             <li className="navbar-item">
-              <a href="#vender" className="navbar-link">
-                Vender
-              </a>
+              <Link to="#vender" className="navbar-link" children="Vender" />
             </li>
             <li className="navbar-item">
-              <a href="#comprar" className="navbar-link">
-                Comprar
-              </a>
+              <Link to="#comprar" className="navbar-link" children="Comprar" />
             </li>
             <li className="navbar-item">
-              <a href="#novidades" className="navbar-link">
-                Novidades e Reviews
-              </a>
+              <Link
+                to="#novidades"
+                className="navbar-link"
+                children="Novidades e Reviews"
+              />
             </li>
           </ul>
         </div>
